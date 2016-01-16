@@ -92,3 +92,42 @@ Push to the remote
   git merge thriller
   git log --pretty=oneline --decorate --all --graph
 ```
+
+### Conflicting changes
+#### Scenario 2: You are making some important changes to the Scifi section that are not yet ready to be released. At the same time, you need to maintain the code that is already on master (conflicting changes)
+
+```console
+  git checkout scifi
+  git merge master
+  git push
+  git add .
+  git commit -m "Message"
+  git push
+  git checkout master
+  git add .
+  git commit -m "Message"
+  git push
+```
+
+#### Rebase the brach onto master, to make it ready for release
+
+```console
+  git checkout scifi
+  git rebase master
+```
+
+#### We now have to resolve the conflicts
+
+Choose the version on the branch, using your favourite text editor  
+
+``` console
+  git add .
+  git rebase --continue
+```
+
+#### The branch is now ready to be merged back to master
+
+``` console
+  git checkout master
+  git merge scifi
+```
