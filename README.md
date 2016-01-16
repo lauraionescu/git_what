@@ -157,3 +157,14 @@ Edit one of the commits (to split it in two)
 ```
 Reorder commits  
 Squash commits  
+
+### Other useful commands
+
+git cherry-pick  
+git reflog
+  git updates reflog every time HEAD moves (can resurrect branches and lost work)    
+
+### Useful resources
+
+http://git-scm.com/book/  
+https://www.atlassian.com/git/tutorials/  
