@@ -131,3 +131,29 @@ Choose the version on the branch, using your favourite text editor
   git checkout master
   git merge scifi
 ```
+
+### Interactive rebase
+#### Scenario 3: You want to open source your movie data, but your commit history contains a lot information that should not be available to the wide world, so we need to clean all that up before releasing it
+
+Create a branch called open-sourcing  
+Add, commit animation/my_neighbour_totoro.txt  
+Add, commit animation/the_cat_returns.txt  
+Add, commit animation/princess_mononoke.txt && animation/kikis_delivery_service.txt  
+Make a change to the_cat_returns and commit  
+
+```console
+  git rebase -i HEAD~4
+```
+
+Edit one of the commits (to split it in two)  
+
+```console
+  git reset HEAD~1
+  git add movies/animation/princess_mononoke.txt
+  git commit -m "Add Princess Mononoke"
+  git add movies/animation/kikis_delivery_service.txt
+  git commit -m "Add Kiki's delivery service"
+  git rebase --continue
+```
+Reorder commits  
+Squash commits  
