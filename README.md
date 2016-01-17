@@ -159,9 +159,13 @@ Add, commit movies/animation/the_cat_returns.txt
 Add, commit movies/animation/princess_mononoke.txt && animation/kikis_delivery_service.txt  
 Make a change to movies/animation/the_cat_returns and commit  
 
+Run interactive rebasing (before the commits have been pushed)  
+
 ```console
   git rebase -i HEAD~4
 ```
+
+This will open up a text editor with the latest 4 commits  
 
 Edit one of the commits (to split it in two)  
 
