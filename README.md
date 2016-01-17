@@ -97,20 +97,36 @@ Push to the remote
 ### Conflicting changes
 #### Scenario 2: You are making some important changes to the Scifi section that are not yet ready to be released. At the same time, you need to maintain the Scifi code that is already on master (conflicting changes)
 
+Checkout the scifi branch  
+This branch is behind master, as some work has been done on master since the last time we merged the branch  
+Merge the master into the scifi branch  
+Make some changes to the movies/scifi/blade_runner.txt file  
+Commit and push those changes  
+
 ```console
   git checkout scifi
   git merge master
+  git status
   git push
-  git add .
-  git commit -m "Message"
-  git push
-  git checkout master
+  <make some changes to blade_runner.txt>
   git add .
   git commit -m "Message"
   git push
 ```
 
-#### Rebase the brach onto master, to make it ready for release
+Checkout master  
+Make some other changes to the movies/scifi/blade_runner.txt file  
+Commit and push those changes  
+
+```console
+  git checkout master
+  <make some other changes to blade_runner.txt>
+  git add .
+  git commit -m "Message"
+  git push
+```
+
+#### Rebase the brach onto master, to make it ready for merging it back to master, while keeping the history clean 
 
 ```console
   git checkout scifi
