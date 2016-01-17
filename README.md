@@ -88,6 +88,7 @@ Push to the remote
 ```console
   git checkout thriller  
   git rebase master
+  git log --pretty=oneline --decorate --all --graph
   git checkout master
   git merge thriller
   git log --pretty=oneline --decorate --all --graph
