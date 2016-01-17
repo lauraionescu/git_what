@@ -126,7 +126,7 @@ Commit and push those changes
   git push
 ```
 
-#### Rebase the brach onto master, to make it ready for merging it back to master, while keeping the history clean 
+#### Rebase the brach onto master, to make it ready for merging it back to master, while keeping the history clean
 
 ```console
   git checkout scifi
@@ -153,10 +153,10 @@ Choose the version on the branch, using your favourite text editor
 #### Scenario 3: You want to open source your movie data, but your commit history contains a lot information that should not be available to the wide world, so we need to clean all that up before releasing it
 
 Create a branch called open-sourcing  
-Add, commit animation/my_neighbour_totoro.txt  
-Add, commit animation/the_cat_returns.txt  
-Add, commit animation/princess_mononoke.txt && animation/kikis_delivery_service.txt  
-Make a change to the_cat_returns and commit  
+Add, commit movies/animation/my_neighbour_totoro.txt  
+Add, commit movies/animation/the_cat_returns.txt  
+Add, commit movies/animation/princess_mononoke.txt && animation/kikis_delivery_service.txt  
+Make a change to movies/animation/the_cat_returns and commit  
 
 ```console
   git rebase -i HEAD~4
