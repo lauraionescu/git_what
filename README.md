@@ -153,6 +153,7 @@ Choose the version on the branch, using your favourite text editor
 #### Scenario 3: You want to open source your movie data, but your commit history contains a lot information that should not be available to the wide world, so we need to clean all that up before releasing it
 
 Create a branch called open-sourcing  
+Create a directory called animation inside movies  
 Add, commit movies/animation/my_neighbour_totoro.txt  
 Add, commit movies/animation/the_cat_returns.txt  
 Add, commit movies/animation/princess_mononoke.txt && animation/kikis_delivery_service.txt  
