@@ -7,7 +7,7 @@ The not-so-every day workflow
 
 Checkout a new brach called scifi  
 Create a folder called scifi inside the movies folder  
-Create a file blade_runner.txt in the scifi folder  
+Create a file blade_runner.txt in the scifi folder, using your favourite text editor  
 Make changes to the file and commit them  
 Push the branch to the remote repository  
 
@@ -22,7 +22,7 @@ Push the branch to the remote repository
 #### The feature is nearly done, but there is some urgent work that needs to be done on master and you need to push a hotfix
 
 Checkout master  
-Add film_noir/the_maltese_falcon.txt  
+Add movies/film_noir/the_maltese_falcon.txt  
 Push the change to master  
 
 ```console
