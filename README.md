@@ -95,7 +95,7 @@ Push to the remote
 ```
 
 ### Conflicting changes
-#### Scenario 2: You are making some important changes to the Scifi section that are not yet ready to be released. At the same time, you need to maintain the code that is already on master (conflicting changes)
+#### Scenario 2: You are making some important changes to the Scifi section that are not yet ready to be released. At the same time, you need to maintain the Scifi code that is already on master (conflicting changes)
 
 ```console
   git checkout scifi
