@@ -6,17 +6,30 @@ The not-so-every day workflow
 #### Scenario 1: You need to add a new category of films, but that is not due to be released yet. Your team has decided that the work is going to be done on a branch, until the feature is ready to be released
 
 Checkout a new brach called scifi  
-Create a folder called scifi inside the movies folder  
-Create a file blade_runner.txt in the scifi folder, using your favourite text editor  
-Make changes to the file and commit them  
-Push the branch to the remote repository  
 
 ```console
   git checkout -b scifi
+```
+
+Create a folder called scifi inside the movies folder  
+Create a file blade_runner.txt in the scifi folder, using your favourite text editor  
+Make changes to the file and commit them  
+
+```console
   git add .
   git commit -m "Add Blade Runner to scifi films"
+```
+
+Push the branch to the remote repository  
+
+```console
   git push -u origin scifi:scifi
-  git log --pretty=oneline --decorate
+```
+
+Let's have a look at the git log
+
+```console
+  git log --oneline --decorate --graph
 ```
 
 #### The feature is nearly done, but there is some urgent work that needs to be done on master and you need to push a hotfix
