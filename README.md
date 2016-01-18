@@ -147,23 +147,25 @@ Squash commits
 Checkout the scifi branch  
 This branch is behind master, as some work has been done on master since the last time we merged the branch  
 Merge the master into the scifi branch  
-Make some changes to the movies/scifi/blade_runner.txt file  
-Commit and push those changes  
 
 ```console
   git checkout scifi
   git merge master
   git status
   git push
-  <make some changes to blade_runner.txt>
+```
+
+Make some changes to movies/scifi/blade_runner.txt file on the scifi branch  
+
+```console
   git add .
-  git commit -m "Message"
+  git commit -m "Meaningful message"
   git push
 ```
 
 Checkout master  
 Make some other changes to the movies/scifi/blade_runner.txt file  
-Commit the changes, but don't push them yet!  
+Commit the changes but don't push them yet
 
 ```console
   git checkout master
@@ -172,11 +174,10 @@ Commit the changes, but don't push them yet!
   git commit -m "Message"
 ```
 
-#### Rebase the brach onto master, to make it ready for merging it back to master, while keeping the history clean
+#### The branch is ready to be merged into master
 
 ```console
-  git checkout scifi
-  git merge master
+  git merge scifi
 ```
 
 #### We now have to resolve the conflicts
@@ -185,15 +186,9 @@ Choose the version on the branch, using your favourite text editor
 
 ``` console
   git add .
-  git rebase --continue
+  git commit
 ```
 
-#### The branch is now ready to be merged back to master
-
-``` console
-  git checkout master
-  git merge scifi
-```
 
 ### Other useful commands
 
