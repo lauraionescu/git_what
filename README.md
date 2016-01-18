@@ -49,12 +49,16 @@ Push the change to master
 #### Let's finish the feature and merge it back to master
 
 checkout the scifi branch  
-Make a change in the blade_runner.txt file and push it to the remote  
 
 ```console
   git checkout scifi
+```
+
+Make a change in the blade_runner.txt file and push it to the remote  
+
+```console
   git add .
-  git commit -m <Short meaningful message>
+  git commit -m "Short meaningful message"
   git push
 ```
 
@@ -63,7 +67,7 @@ Make a change in the blade_runner.txt file and push it to the remote
 ```console
   git checkout master
   git merge scifi
-  git log --pretty=oneline
+  git log --oneline --decorate --graph
   git push
 ```
 
