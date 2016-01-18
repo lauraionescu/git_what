@@ -84,7 +84,9 @@ Push to the remote
 
 #### Let's finish the experimental work and merge it back to master
 
-Edit the spectre.txt file and make another change
+Edit the spectre.txt file and make another change  
+Commit the change  
+Rebase the thriller branch onto master  
 
 ```console
   git checkout thriller  
@@ -93,10 +95,17 @@ Edit the spectre.txt file and make another change
   git commit -m "Message"
   git rebase master
   git log --pretty=oneline --decorate --all --graph
+```
+
+Switch back to master  
+Merge the thriller branch  
+
+```console
   git checkout master
   git merge thriller
   git log --pretty=oneline --decorate --all --graph
 ```
+
 
 ### Interactive rebase
 #### Scenario 3: You want to open source your movie data, but your commit history contains a lot information that should not be available to the wide world, so we need to clean all that up before releasing it
