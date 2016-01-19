@@ -41,6 +41,7 @@ Push the change to master
 ```console
   git checkout master
   git add .
+  git commit -m "Message"
   git pull
   git push
   git log --pretty=oneline --decorate
@@ -211,7 +212,7 @@ Choose the version on the branch, using your favourite text editor
 
 git cherry-pick  
 git reflog
-  git updates reflog every time HEAD moves (can resurrect branches and lost work)    
+  git updates reflog every time HEAD moves (can resurrect branches and lost work)
 
 ### Useful resources
 
